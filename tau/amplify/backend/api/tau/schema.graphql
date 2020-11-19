@@ -1,0 +1,105 @@
+type User @model{
+  id: ID!
+  phoneNumber:String!
+  userID: String!
+  email: String!
+  password:String!
+  profilePic:File
+  name:String!
+  gender:String!
+  state:String!
+  school:String!
+  accountInfo: Account!
+  major:String
+  studentNum:String
+  currentRoom:Room 
+  rooms:[Room] 
+  ReportHistory:[Report]
+  Blocking:[User]
+  Blocked:[User]
+  Score:Float
+  Reviews:[Review]
+}
+
+type File @model{
+  id:ID!
+  url:String!
+}
+
+type Account @model{
+  id:ID!
+  bank:String!
+  accountNum:String!
+  owner:String!
+}
+
+type Message @model{
+  id:ID!
+  from:User!
+  content:String!
+  createDate:AWSDateTime!
+}
+
+type ChatRoom @model{
+  id:ID!
+  title:String!
+  Users:[User!]!
+  messages:[Message]!
+}
+
+type Location @model{
+  id:ID!
+  name:String!
+  Latitude:Float!
+  Longitude:Float!
+}
+
+type Room @model{
+  id:ID!
+  Users:[User]!
+  chatting:ChatRoom!
+  ready:[User]
+  from:Location!
+  to:Location!
+  when:AWSDateTime!
+  roomGenderFilter:Boolean!
+  leader:User!
+  pay:Payment
+}
+
+type Payment @model{
+  id:ID!
+  unpaidUser:[User]!
+  price:Int
+  connectedRoom:Room!
+}
+
+type Report @model{
+  id:ID!
+  reportedUser:User!
+  from:User!
+  reason: String!
+  where:Room!
+  state: String!
+}
+
+type BlockedUser @model{
+  id:ID!
+  block:User!
+  deactivateDate:AWSDateTime!
+}
+
+type Deactivate @model{
+  id:ID!
+  deactivateUser:User!
+  why:Int!
+  deactivateReason:String
+  deactivatedDate:AWSDateTime!
+}
+
+type Review @model{
+  id:ID!
+  Score:Int!
+  Reason:String
+  Reviewed:User!
+}

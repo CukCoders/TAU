@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "tau",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authtauda7af3aa",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

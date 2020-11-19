@@ -1,0 +1,20 @@
+{
+  "native": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tau-native-224650-authRole",
+      "UnauthRoleArn": "arn:aws:iam::962572896171:role/amplify-tau-native-224650-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::962572896171:role/amplify-tau-native-224650-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-tau-native-224650-deployment",
+      "UnauthRoleName": "amplify-tau-native-224650-unauthRole",
+      "StackName": "amplify-tau-native-224650",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:962572896171:stack/amplify-tau-native-224650/8d067340-0d5a-11eb-9862-0a4576d3ff72",
+      "AmplifyAppId": "d2e60hvwd1cbhd"
+    },
+    "categories": {
+      "auth": {
+        "tauda7af3aa": {}
+      }
+    }
+  }
+}
