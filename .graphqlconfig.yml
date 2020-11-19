@@ -1,0 +1,18 @@
+projects:
+  tau-native:
+    schemaPath: ../../../../../graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: /graphql
+        region: ap-northeast-2
+        apiId: zchosbcd45dkbkuadgpnkwzvgq
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3
